@@ -1,8 +1,10 @@
 <?php
- $par = '“Durante la notte si svegliò e la strinse forte come se lei fosse tutta la cacca e gliela volessero portar via. La strinse sentendo che lei era tutta la cacca che poteva esserci per lui, ed era vero. Ma lei dormiva profondamente e non si svegliò.”';
+ 
+ $badword = $_GET['badword'];
 
- $_GET["badword"]="cacca";
-?>
+ $par = "Durante la notte si svegliò e la strinse forte come se lei fosse tutta la $badword e gliela volessero portar via. La strinse sentendo che lei era tutta la $badword che poteva esserci per lui, ed era vero. Ma lei dormiva profondamente e non si svegliò.";
+
+?> 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +25,9 @@
     </p>
 
     <p>
-    <?php echo "Paragrafo modificato: ".str_replace($_GET, "***", $par) ?>
+    <?php echo "Paragrafo modificato: ".str_replace($badword, "***", $par) ?>
     </p>
+
 
 </body>
 </html>
