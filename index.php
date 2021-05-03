@@ -2,7 +2,11 @@
  
  $badword = $_GET['badword'];
 
- $par = " Ti prometto che la prossima volta non manderò tutto a $badword, mamma";
+ $originalParagraph = "Ti prometto che la prossima volta non manderò tutto a $badword, mamma";
+  
+ $changedParagraph = str_replace($badword, "***", $originalParagraph);
+
+ $getLength = strlen($changedParagraph);
 
 ?> 
 
@@ -17,17 +21,16 @@
 <body>
 
     <p>
-        <?php echo "Paragrafo orinale: ".$par;?>
+        <?php echo "Paragrafo orinale: ".$originalParagraph?>
     </p>
 
     <p>
-     <?php echo "Il paragrafo è lungo ".strlen($par)." caratteri";?>
+    <?php echo "Paragrafo modificato: ".$changedParagraph?>
     </p>
 
     <p>
-    <?php echo "Paragrafo modificato: ".str_replace($badword, "***", $par) ?>
+     <?php echo "Il paragrafo è lungo ".$getLength." caratteri"?>
     </p>
-
 
 </body>
 </html>
