@@ -15,10 +15,16 @@
 <body>
 
     <p>
-        <?php echo $par; 
-        echo strlen($par);
-        echo str_replace($_GET, "***", $par) ?>
-    </p> 
+        <?php echo "Paragrafo orinale: ".$par;?>
+    </p>
+
+    <p>
+     <?php echo "Il paragrafo è lungo ".strlen($par)." caratteri";?>
+    </p>
+
+    <p>
+    <?php echo "Paragrafo modificato: ".str_replace($_GET, "***", $par) ?>
+    </p>
 
 </body>
 </html>
