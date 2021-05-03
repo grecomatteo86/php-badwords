@@ -2,7 +2,7 @@
  
  $badword = $_GET['badword'];
 
- $par = "Durante la notte si svegliò e la strinse forte come se lei fosse tutta la $badword e gliela volessero portar via. La strinse sentendo che lei era tutta la $badword che poteva esserci per lui, ed era vero. Ma lei dormiva profondamente e non si svegliò.";
+ $par = " Ti prometto che la prossima volta non manderò tutto a $badword, mamma";
 
 ?> 
 
