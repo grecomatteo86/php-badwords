@@ -1,11 +1,18 @@
 <?php
- 
- $badword = $_GET['badword'];
 
- $originalParagraph = "Ti prometto che la prossima volta non manderò tutto a $badword, mamma";
+    ini_set('display_errors', '1');
+    ini_set('display_startup_errors', '1');
+    error_reporting(E_ALL);
+
+ $originalParagraph = "Ti prometto che la prossima volta non manderò tutto a puttane, mamma";
+
+ if (!empty($_GET['badword'])){
+
+    $badword = $_GET['badword'];
+    $changedParagraph = str_replace($badword, "***", $originalParagraph);
+    
+ }
   
- $changedParagraph = str_replace($badword, "***", $originalParagraph);
-
  $getLength = strlen($changedParagraph);
 
 ?> 
@@ -25,11 +32,11 @@
     </p>
 
     <p>
-    <?php echo "Paragrafo modificato: ".$changedParagraph?>
+        <?php echo "Paragrafo modificato: ".$changedParagraph?>
     </p>
 
     <p>
-     <?php echo "Il paragrafo è lungo ".$getLength." caratteri"?>
+        <?php echo "Il paragrafo è lungo ".$getLength." caratteri"?>
     </p>
 
 </body>
