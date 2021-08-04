@@ -1,18 +1,11 @@
 <?php
-
  $originalParagraph = "Ti prometto che la prossima volta non manderò tutto a puttane, mamma";
-
  if (!empty($_GET['badword'])){
-
     $badword = $_GET['badword'];
     $changedParagraph = str_replace($badword, "***", $originalParagraph);
-    
  }
-  
  $getLength = strlen($changedParagraph);
-
 ?> 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,19 +15,15 @@
     <title>Document</title>
 </head>
 <body>
-
     <p>
         <?php echo "Paragrafo orinale: ".$originalParagraph?>
     </p>
-
     <p>
         <?php echo "Paragrafo modificato: ".$changedParagraph?>
     </p>
-
     <p>
         <?php echo "Il paragrafo è lungo ".$getLength." caratteri"?>
     </p>
-
 </body>
 </html>
 
